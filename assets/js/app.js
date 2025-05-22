@@ -1,10 +1,11 @@
 const baseEndpoint = 'https://api.github.com';
-const usersEndpoint = `${baseEndpoint}/users`;
-const $n = document.querySelector('name');
-const $b = document.querySelector('#blog');
+const usersEndpoint = ${baseEndpoint}/users;
+const $n = document.querySelector('.name');
+const $b = document.querySelector('.blog');
 const $l = document.querySelector('.location');
 
-function displayUser(username) {
+//Para el await tiene que ser dentro de una async function
+async function displayUser(username) {
   $n.textContent = 'cargando...';
   const response = await fetch(`${usersEndpoint}/${username}`);
   console.log(data);
